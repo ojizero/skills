@@ -24,7 +24,13 @@ Follow the subject pattern the log shows. When the log shows no pattern, write a
 
 ## Description
 
-Four parts, in order:
+Open with an attribution note, above the parts and outside any section: the harness, the model and its version, the provider, and the session ID, on one line, so a reader sees that an agent opened this pull request, and which one.
+
+> _Opened by Claude Code · claude-opus-5 (Anthropic) · session `01ab…`_
+
+Write the fields this session already holds, and drop the note when it holds none — none of them is worth digging for.
+
+Then four parts, in order:
 
 1. **Intention** — one sentence on what this change does.
 2. **Problem** — the plain statement of what is wrong or missing today.
