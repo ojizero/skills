@@ -1,0 +1,7 @@
+interface:
+  display_name: "PR Babysit"
+  short_description: "Monitor a PR until it is mergeable"
+  default_prompt: "Use $pr-babysit to monitor and babysit a provided PR until it is mergeable."
+
+policy:
+  allow_implicit_invocation: false
