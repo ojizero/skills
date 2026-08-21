@@ -1,0 +1,12 @@
+version = 1
+agents = ["claude", "cursor", "codex", "opencode", "pi"]
+
+minimum_release_age = 10080
+
+[trust]
+
+github_repos = ["mattpocock/skills"]
+
+[[skills]]
+name = "writing-for-agents"
+source = "mattpocock/skills"
