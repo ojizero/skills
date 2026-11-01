@@ -1,0 +1,7 @@
+interface:
+  display_name: "Attribution"
+  short_description: "Sign messages posted on the user's behalf"
+  default_prompt: "Use $attribution to sign what you post for me."
+
+policy:
+  allow_implicit_invocation: true
