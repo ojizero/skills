@@ -6,7 +6,7 @@ This repo retains the skills that I found I needed to do in order to codify comm
 
 ## Install
 
-Each top level folder is one skill: `pr-create`, `pr-babysit`.
+Skills are grouped by topic. Each `<group>/<skill>` folder is one skill, such as `delivery/pull-request`.
 
 <details>
 <summary><strong>dotagents (recommended)</strong></summary>
