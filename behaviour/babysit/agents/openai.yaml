@@ -1,0 +1,7 @@
+interface:
+  display_name: "Babysit"
+  short_description: "Watch work until it is done"
+  default_prompt: "Use $babysit to watch this until it is done."
+
+policy:
+  allow_implicit_invocation: true
