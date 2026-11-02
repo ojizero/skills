@@ -27,7 +27,9 @@ The title becomes the merge subject, so it must stand alone. Follow the commit s
 ## Review notes
 ```
 
-- **Why:** the problem or the motivation, in one to three sentences. Say what the PR does only when the title does not. Link the issue (`Closes #<n>`) when there is one.
+- **Why:** the problem or the motivation, in one to three sentences. Say what the PR does only when the title does not. Link the related issues in the syntax of their tracker, such as `Closes #<n>` or a ticket key.
+  - Take the issues from the context first: the request, the branch name, the commits, or the session.
+  - With none in the context, search the project's trackers for open issues. Link an issue only when you are sure it describes the problem this change solves.
 - **What changed:** the behaviour, not a list of files. When a visual makes the change clearer, lead with the smallest one:
   - Mermaid for a flow or an interaction.
   - A tree for structure: files, components, or calls.

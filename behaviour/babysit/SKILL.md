@@ -1,6 +1,6 @@
 ---
 name: babysit
-description: Watch work until it is done, and act on what comes up. Use when asked to watch, monitor, or babysit something, or to keep going until it is green or done.
+description: Watch work until it is done, and act on what comes up. Use when asked to watch, monitor, or babysit something, or to keep going until it is green or done. Use when work you started will still be running after your turn ends.
 license: MIT
 ---
 
