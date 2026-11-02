@@ -1,0 +1,7 @@
+interface:
+  display_name: "Housekeeping"
+  short_description: "Clean up this Mac and free disk space"
+  default_prompt: "Use $housekeeping to clean up this Mac and report what it freed."
+
+policy:
+  allow_implicit_invocation: true
