@@ -1,6 +1,6 @@
 ---
 name: attribution
-description: Sign messages you post on the user's behalf. Use before you send anything other people will read, such as a PR, comment, issue, chat message, or email.
+description: Sign messages you post on the user's behalf. Use before you post or send anything meant for humans to read, such as a PR, comment, issue, chat message, or email.
 license: MIT
 ---
 
@@ -22,4 +22,4 @@ For example, with an app, without one, and with context:
 - **Context:** put any extra provenance, such as a workflow, run ID, or reviewed commit, at the end of the same line as short `·` items. Use IDs, not prose. Do not add a footer or a second attribution anywhere in the message.
 - **Edits:** keep the lines already there. Add yours below them, as a new paragraph in the same quote block.
 
-Output already known to be agentic, such as code, docs, or a folder of AI-only files, gets no line.
+Messages meant for other agents, and output already known to be agentic, such as code, docs, or a folder of AI-only files, get no line.
