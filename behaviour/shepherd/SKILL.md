@@ -1,13 +1,15 @@
 ---
 name: shepherd
-description: Keep several threads on track to a goal while they own the plan and the work. Use when asked to shepherd threads, or to keep them from stalling or drifting. Not for splitting work or combining results.
+description: Keep one or more threads, sessions, or agents on track to a goal while they own the plan, the work, and how they work together. Not for splitting work or combining results.
 license: MIT
 disable-model-invocation: true
 metadata:
   status: testing
 ---
 
-The workers own the plan and the work. You keep them on course to the goal. Use babysit to wait and finish.
+The workers own the plan, the work, and how they work together. You keep them on course to the goal. Use babysit to wait and finish.
+
+A worker is a thread: a running agent that you can read from a mark and send a message to. Examples are a T3 Code thread, a Claude Code session, and a peer agent. A subagent or delegate is part of the thread that started it. Watch that thread, not the subagent.
 
 ## Charter
 
