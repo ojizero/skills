@@ -1,0 +1,7 @@
+interface:
+  display_name: "Shepherd"
+  short_description: "Keep several threads on track to a goal"
+  default_prompt: "Use $shepherd to keep these threads on track to the goal."
+
+policy:
+  allow_implicit_invocation: false
