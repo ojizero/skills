@@ -1,0 +1,7 @@
+interface:
+  display_name: "Review"
+  short_description: "Review a change and report claims"
+  default_prompt: "Use $review to review this change and report claims."
+
+policy:
+  allow_implicit_invocation: true
