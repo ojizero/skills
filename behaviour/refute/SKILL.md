@@ -1,6 +1,6 @@
 ---
 name: refute
-description: Refute claims, such as review findings, by trying to break each one against the source. Use when asked to refute, verify, or challenge findings or review comments, to check if they are real, or to give a second opinion on a review.
+description: Try to break claims, such as review findings or bot comments, against the source, and report which ones hold. Use when asked to refute, verify, or challenge findings or review comments, or to check if they are real.
 license: MIT
 ---
 
@@ -43,12 +43,17 @@ Keep the label, or lower it when the evidence shows a smaller impact, such as `i
 
 ## Format
 
-Give one verdict for each claim or merged group, in input order. Keep every claim, including each one that fails, so the reader sees what was dropped and why. Fit the format to where the report goes: a short list in a chat, a visual such as an HTML page or a diagram when it makes the verdicts faster to read, or structured data such as YAML or JSON when the caller asks for it.
+Start the report with a short summary:
 
-- **Claim:** which claim, or which claims you merged.
+- **Counts:** how many claims hold, hold in part, and fail.
+- **Recommendation:** one line that starts with the action, by ID, such as "Fix C1 and C3; C2 can wait; drop the rest" or "Merge as is: no blocking claim holds". Recommend only: do not act on it.
+
+Then give one verdict for each claim or merged group, in input order. Keep every claim, including each one that fails, so the reader sees what was dropped and why. Fit the format to where the report goes: a short list in a chat, a visual such as an HTML page or a diagram when it makes the verdicts faster to read, or structured data such as YAML or JSON when the caller asks for it.
+
+- **Claim:** the claim's ID, such as `C1`, or the IDs you merged. Keep the IDs that the claims have. When they have none, give them `C1`, `C2`, and so on, in input order.
 - **Verdict:** holds, holds in part, or fails.
 - **Evidence:** what you read, traced, or ran.
 - **Confidence:** read, traced, or ran.
 - **Label:** the label, and the label it had before when you lowered it.
 
-End with Notes: new problems for a new review, each with a location and a failure. Leave Notes out when there are none.
+End with Notes: new problems for a new review, each with an ID such as `N1`, a location, and a failure. Leave Notes out when there are none.

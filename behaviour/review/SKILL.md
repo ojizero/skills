@@ -1,6 +1,6 @@
 ---
 name: review
-description: Review a change or artifact and report claims. Use when asked to review, look over, or check a PR, diff, commit, plan, doc, or design.
+description: Review a change or artifact for problems it brings in, and report each one with evidence. Use when asked to review or look over a PR, diff, commit, plan, doc, or design.
 license: MIT
 ---
 
@@ -38,10 +38,16 @@ Each claim states the highest level its evidence reaches:
 
 Each claim has these fields. Fit the format to where the report goes: a short list in a chat, a visual such as an HTML page or a diagram when it makes the claims faster to read, or structured data such as YAML or JSON when the caller asks for it.
 
+- **ID:** `C1`, `C2`, and so on, in report order, so the user can reply by ID.
 - **Location:** path:line, or the section of the document.
 - **Failure:** the inputs or state, and the wrong output, crash, or cost.
 - **Evidence:** what you read, traced, or ran.
 - **Confidence:** read, traced, or ran.
 - **Label:** use a Conventional Comments label, such as `issue`, `suggestion`, `nitpick`, `question`, `todo`, `thought`, or `praise`. Add `blocking` or `non-blocking` when it changes what the reader must do.
 
-Report the basis, the intent, and then the claims, most severe first. With no claims, say so, and list what you read.
+Start the report with a short summary:
+
+- **Counts:** how many claims, and how many of them are blocking.
+- **Recommendation:** one line that starts with the action, by ID, such as "Fix C1 and C2 before merge; C3 can wait" or "Merge as is: only nitpicks". Recommend only: do not act on it.
+
+Then give the basis, the intent, and the claims. Sort the claims by impact: blocking first, then by how bad the failure is and how much it reaches, such as how many users, callers, or paths. With no claims, say so, and list what you read.
