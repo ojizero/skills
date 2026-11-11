@@ -1,0 +1,7 @@
+interface:
+  display_name: "Refute"
+  short_description: "Try to break each claim against the source"
+  default_prompt: "Use $refute to check these findings."
+
+policy:
+  allow_implicit_invocation: true
