@@ -1,0 +1,7 @@
+interface:
+  display_name: "Recap"
+  short_description: "Catch up on a thread or project and its next step"
+  default_prompt: "Use $recap to catch me up on this thread."
+
+policy:
+  allow_implicit_invocation: true
