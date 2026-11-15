@@ -1,7 +1,7 @@
 interface:
   display_name: "Explain"
-  short_description: "Explain how something works, with a visual"
-  default_prompt: "Use $explain to explain how this works."
+  short_description: "Explain why, how, or what, with a visual"
+  default_prompt: "Use $explain to explain why this is so."
 
 policy:
   allow_implicit_invocation: true
