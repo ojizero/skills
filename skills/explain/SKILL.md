@@ -1,12 +1,12 @@
 ---
 name: explain
-description: Explain why, how, or what, with a visual and evidence. Use when the user asks why something is so, what changed, whether it matters, how it works, or what the agent meant; restates an answer to check it; asks to explore or look into something to understand it; or quotes a point to expand on. Also use when the question sits inside a larger task or a batch of comments.
+description: Explain something so the user understands it, with a verdict, evidence, and a visual. Use when the user wants to understand why or how something works, what changed, whether it matters, or what the agent meant. Also use when the user asks to explore an idea, a code base, or docs, quotes a point to ask about or expand on, or restates an answer to check it.
 license: MIT
 ---
 
 Explain only. Read and run checks as you need. Make changes, such as edits, commits, or posts, only when the user asks for them. "Explore", "look into", and "can we" ask you to find out, not to build.
 
-When a message mixes tasks with questions, answer the questions yourself, in full, before you report on the tasks.
+When a message mixes tasks with questions, answer each question yourself before you report on the tasks.
 
 ## Check
 
@@ -22,14 +22,16 @@ Check before you claim. A confident wrong answer costs the user more than a slow
 
 Write for the user, not for an agent. Use plain words, and define each term the first time you use it. Rewrite findings from delegates or subagents in your own words.
 
-Use these parts in this order. Say each point once.
+Start from the short form: the verdict, then a few labelled lines for its reason and its evidence, with no headings.
 
-1. **Verdict:** the answer in the first line. If the question has a wrong premise, correct it here. If the question is whether something matters, the so-what is the verdict.
-2. **Visual:** include one, unless the answer is a yes/no or a single fact. Choose the form from the shape of the subject:
-   - flow or sequence: Mermaid or an ASCII flow
+Grow to the full form only when the answer needs it: more than one question, a flow or a comparison to show, or a mechanism the user asked about. The full form uses these parts in this order. Say each point once.
+
+1. **Verdict:** the answer in the first line. If the question has a wrong premise, correct it here. If the question is whether something matters, the so-what is the verdict. For "which option is better", the verdict is your pick and its main reason.
+2. **Visual:** choose the form from the shape of the subject:
+   - flow, sequence, dependency graph, or steps between actors: a Mermaid diagram
    - options, comparison, or status: a table
    - change: before and after
-   - parts of a whole: a tree
+   - a folder layout: an ASCII tree
    - a subject that Markdown shows poorly: an HTML page, at any size. For example, it needs interaction, colour, or a layout side by side.
 3. **One section for each question**, in the user's order:
    1. what it is, in one line;
@@ -62,16 +64,17 @@ An explore ask opens a conversation. The first answer is a map, not a full repor
 
 ## Visuals
 
-- **Mermaid:** keep labels as plain text, with no `;`, braces, or arrow symbols in them. Render the diagram once before you send it, for example with `mise exec npm:@mermaid-js/mermaid-cli -- mmdc`. In a client that shows Mermaid as raw text, use ASCII.
+- **Mermaid:** draw each flow or graph in a `mermaid` code block, not with box-drawing characters. Keep labels as plain text, with no `;`, braces, or arrow symbols in them. Use an ASCII flow only when the user says their client shows Mermaid as raw text.
 - **HTML:** write the page to `/tmp/explain/<topic>.html`, check that it renders, and give the absolute path. Keep it a local file. Do not publish it as an Artifact or a link.
 
 ## Follow-ups
 
 A follow-up quotes one point of an earlier answer, or restates the answer to check it.
 
-- Answer only that point, with the same parts: a verdict, what it is and why, where it lives, before and after, and an example.
+- Answer only that point, in the short form unless it needs the full form.
 - For "what do you mean", say the point again in plain words, and give its why. A definition alone is not enough.
 - When the new answer changes the whole earlier answer, such as a wrong premise or a correction that touches many points, give the full answer again as the current version, and say what changed.
 - For a restatement, start with "Yes", "Almost", or "No", then give the correction.
+- For pushback, check the claim again before you answer.
 - If an earlier answer was wrong, say so in the first line.
 - Keep settled points closed.
