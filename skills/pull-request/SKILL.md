@@ -34,7 +34,7 @@ The title becomes the merge subject, so it must stand alone. Follow the commit s
   - Mermaid for a flow or an interaction.
   - A tree for structure: files, components, or calls.
   - A `diff` sketch when the structure exists and changes.
-- **Evidence:** what you ran and what it showed. Show before and after where you can.
+- **Evidence:** checks a reviewer can repeat: the test or command, and what it showed. Show before and after where you can. Name each check by what it ran, and link only what the reviewer can open. Local files, the steps of your workflow, and your own review are process, not evidence: keep them out.
 - **Merge danger:**
   - **Door:** one-way when a revert cannot undo the change, such as a migration, a data write, a message or delivery sent, or a removed API that clients use. Two-way otherwise.
   - **Blast radius:** one word for the area, then who or what it affects.
