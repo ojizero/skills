@@ -22,4 +22,4 @@ For example, with an app, without one, and with context:
 - **Context:** put any extra provenance, such as a workflow, run ID, or reviewed commit, at the end of the same line as short `·` items. Use IDs, not prose. Do not add a footer or a second attribution anywhere in the message.
 - **Edits:** keep the lines already there. Add yours below them, as a new paragraph in the same quote block.
 
-Commit messages, messages meant for other agents, and output already known to be agentic, such as code, docs, or a folder of AI-only files, get no line.
+Commit messages, messages meant only for other agents, such as a subagent prompt, and output already known to be agentic, such as code, docs, or a folder of AI-only files, get no line. A message for an agent that you post where people can read it, such as a bot command on a PR, still gets the line.
